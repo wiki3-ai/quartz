@@ -1,0 +1,24 @@
+{
+  "name": "Quartz",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "npm ci",
+  "forwardPorts": [8080, 3001],
+  "portsAttributes": {
+    "8080": {
+      "label": "Quartz Site",
+      "onAutoForward": "openBrowser"
+    },
+    "3001": {
+      "label": "Quartz Hot-reload WS",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
